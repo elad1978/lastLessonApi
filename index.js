@@ -67,7 +67,6 @@ app.delete("/api/products/:id", (req, res) => {
 
 app.put("/api/products/:id", jsonParser, (req, res) => {
   const { id, pName, price } = req.body;
-  console.log(id);
   const pId = req.params.id;
   if (!pId) {
     res.status(400).send("there is no id");
